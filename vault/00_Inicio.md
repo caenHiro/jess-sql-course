@@ -32,23 +32,29 @@ Estudia en orden. Cada nota tiene ejemplos que puedes ejecutar en DBeaver.
 | [[01_Conceptos/03_DML]] | SELECT, INSERT, UPDATE, DELETE — datos |
 | [[01_Conceptos/04_Procedimientos_Almacenados]] | DELIMITER, IN/OUT/INOUT, CALL |
 | [[01_Conceptos/05_Disparadores]] | BEFORE/AFTER, NEW/OLD, SIGNAL |
+| [[01_Conceptos/06_Consultas_SELECT_y_Funciones]] | SELECT, WHERE, GROUP BY, HAVING, funciones de agregacion |
 
 ### 3. Crea la base de datos
 
 Ejecuta los scripts en DBeaver en este orden:
 
 ```
-scripts/01_ddl.sql       -- crea las tablas
-scripts/02_dml.sql       -- inserta los datos de prueba
+scripts/01_ddl.sql          -- crea las tablas
+scripts/02_dml.sql          -- inserta los datos de prueba
 scripts/03_procedimientos.sql
 scripts/04_disparadores.sql
 ```
 
 ### 4. Resuelve los ejercicios
 
-- Lee [[03_Ejercicios/00_Descripcion_BD]] para entender el modelo
-- Intenta resolver [[03_Ejercicios/01_Consultas]] antes de ver las soluciones
-- Las soluciones estan en `scripts/05_consultas_solucion.sql`
+Lee primero [[03_Ejercicios/00_Descripcion_BD]] para entender el modelo de datos.
+
+| Ejercicios | Nivel | Soluciones |
+|---|---|---|
+| [[03_Ejercicios/01_Consultas_Basicas]] | Basico — SELECT, WHERE, ORDER BY, LIKE, BETWEEN, IN | `scripts/05_consultas_basicas_solucion.sql` |
+| [[03_Ejercicios/02_Consultas_Intermedias]] | Intermedio — GROUP BY, HAVING, subconsultas, JOINs multiples | `scripts/06_consultas_intermedias_solucion.sql` |
+
+> Intenta resolver cada consulta tú sola antes de ver la solución.
 
 ---
 
@@ -56,10 +62,10 @@ scripts/04_disparadores.sql
 
 ```
 alumno/vault/
-├── 00_Inicio.md         <-- estas aqui
-├── 01_Conceptos/        teoria: fundamentos, DDL, DML, procedures, triggers
-├── 02_Setup/            como levantar Docker y conectar DBeaver
-└── 03_Ejercicios/       descripcion de la BD y 10 consultas
+├── 00_Inicio.md             <-- estas aqui
+├── 01_Conceptos/            teoria: fundamentos, DDL, DML, procedures, triggers, consultas
+├── 02_Setup/                como levantar Docker y conectar DBeaver
+└── 03_Ejercicios/           descripcion de la BD + consultas basicas e intermedias
 ```
 
 ---

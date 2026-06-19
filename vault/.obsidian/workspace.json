@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Ejercicios/01_Consultas.md",
+                "file": "03_Ejercicios/02_Consultas_Intermedias.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_Consultas"
+              "title": "02_Consultas_Intermedias"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_Ejercicios/01_Consultas.md",
+                "file": "03_Ejercicios/02_Consultas_Intermedias.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 01_Consultas"
+              "title": "Enlaces entrantes de 02_Consultas_Intermedias"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Ejercicios/01_Consultas.md",
+                "file": "03_Ejercicios/02_Consultas_Intermedias.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de 01_Consultas"
+              "title": "Enlaces salientes de 02_Consultas_Intermedias"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Ejercicios/01_Consultas.md",
+                "file": "03_Ejercicios/02_Consultas_Intermedias.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de 01_Consultas"
+              "title": "Esquema de 02_Consultas_Intermedias"
             }
           }
         ]
@@ -185,8 +185,11 @@
   },
   "active": "57f820ac531fc022",
   "lastOpenFiles": [
-    "03_Ejercicios/00_Descripcion_BD.md",
+    "03_Ejercicios/01_Consultas_Basicas.md",
     "03_Ejercicios/01_Consultas.md",
+    "03_Ejercicios/02_Consultas_Intermedias.md",
+    "01_Conceptos/06_Consultas_SELECT_y_Funciones.md",
+    "03_Ejercicios/00_Descripcion_BD.md",
     "02_Setup/02_DBeaver.md",
     "02_Setup/01_Docker_MySQL.md",
     "01_Conceptos/03_DML.md",

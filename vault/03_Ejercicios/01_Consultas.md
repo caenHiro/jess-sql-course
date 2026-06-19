@@ -20,6 +20,8 @@ Obtén el nombre completo de cada empleado, el nombre de su departamento y el no
 nombre_completo | departamento | puesto | salario
 ```
 
+select e.nombre, e.apellido, d.nombre , p.nombre_puesto from empleados e join puestos p on e.id_puesto = p.id_puesto join departamentos d on e.id_departamento = d.id_departamento order by d.nombre, e.apellido
+
 ---
 
 ## Consulta 2 — Empleados con salario mayor al promedio general
@@ -27,11 +29,17 @@ nombre_completo | departamento | puesto | salario
 Lista los empleados que ganan más que el promedio de salario de todos los empleados. Muestra nombre, apellido, salario y el promedio general.
 
 **Conceptos:** subconsulta en `WHERE`, `AVG()`
+SELECT e.nombre, e.apellido, e.salario, (
+
+select avg (salario) from empleados ) from empleados e where salario > (
+
+select avg (salario) from empleados )
 
 **Columnas esperadas:**
 ```
 nombre | apellido | salario | promedio_general
 ```
+
 
 ---
 

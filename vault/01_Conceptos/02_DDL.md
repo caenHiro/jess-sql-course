@@ -11,11 +11,11 @@ estado: en-progreso
 
 ## Comandos DDL principales
 
-| Comando | Para qué |
-|---|---|
-| `CREATE` | Crear base de datos, tabla, índice |
-| `ALTER` | Modificar una tabla existente |
-| `DROP` | Eliminar una tabla o base de datos |
+| Comando    | Para qué                                                             |
+| ---------- | -------------------------------------------------------------------- |
+| `CREATE`   | Crear base de datos, tabla, índice                                   |
+| `ALTER`    | Modificar una tabla existente                                        |
+| `DROP`     | Eliminar una tabla o base de datos                                   |
 | `TRUNCATE` | Vaciar una tabla (borra todos los registros, mantiene la estructura) |
 
 ---
@@ -46,16 +46,16 @@ CREATE TABLE nombre_tabla (
 
 ### Tipos de datos más usados en MySQL
 
-| Tipo | Para qué | Ejemplo |
-|---|---|---|
-| `INT` | Números enteros | `id INT` |
-| `DECIMAL(p,d)` | Dinero y precisión | `salario DECIMAL(10,2)` |
-| `VARCHAR(n)` | Texto variable hasta n caracteres | `nombre VARCHAR(100)` |
-| `TEXT` | Texto largo | `descripcion TEXT` |
-| `DATE` | Fecha `YYYY-MM-DD` | `fecha_contratacion DATE` |
-| `DATETIME` | Fecha y hora | `fecha_registro DATETIME` |
-| `TINYINT(1)` | Booleano (0 = false, 1 = true) | `activo TINYINT(1)` |
-| `ENUM(...)` | Lista cerrada de valores | `estado ENUM('activo','inactivo')` |
+| Tipo           | Para qué                          | Ejemplo                            |
+| -------------- | --------------------------------- | ---------------------------------- |
+| `INT`          | Números enteros                   | `id INT`                           |
+| `DECIMAL(p,d)` | Dinero y precisión                | `salario DECIMAL(10,2)`            |
+| `VARCHAR(n)`   | Texto variable hasta n caracteres | `nombre VARCHAR(100)`              |
+| `TEXT`         | Texto largo                       | `descripcion TEXT`                 |
+| `DATE`         | Fecha `YYYY-MM-DD`                | `fecha_contratacion DATE`          |
+| `DATETIME`     | Fecha y hora                      | `fecha_registro DATETIME`          |
+| `TINYINT(1)`   | Booleano (0 = false, 1 = true)    | `activo TINYINT(1)`                |
+| `ENUM(...)`    | Lista cerrada de valores          | `estado ENUM('activo','inactivo')` |
 
 ---
 

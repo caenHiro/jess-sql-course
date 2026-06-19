@@ -11,12 +11,12 @@ estado: en-progreso
 
 ## Comandos DML principales
 
-| Comando | Para qué |
-|---|---|
-| `INSERT` | Insertar nuevas filas |
-| `SELECT` | Consultar datos |
+| Comando  | Para qué                   |
+| -------- | -------------------------- |
+| `INSERT` | Insertar nuevas filas      |
+| `SELECT` | Consultar datos            |
 | `UPDATE` | Modificar filas existentes |
-| `DELETE` | Eliminar filas |
+| `DELETE` | Eliminar filas             |
 
 ---
 
@@ -97,13 +97,13 @@ SELECT * FROM empleados LIMIT 10 OFFSET 10;
 
 Las funciones de agregado calculan valores sobre un conjunto de filas.
 
-| Función | Qué hace |
-|---|---|
+| Función    | Qué hace                  |
+| ---------- | ------------------------- |
 | `COUNT(*)` | Cuenta el número de filas |
-| `SUM(col)` | Suma los valores |
-| `AVG(col)` | Calcula el promedio |
-| `MIN(col)` | Valor mínimo |
-| `MAX(col)` | Valor máximo |
+| `SUM(col)` | Suma los valores          |
+| `AVG(col)` | Calcula el promedio       |
+| `MIN(col)` | Valor mínimo              |
+| `MAX(col)` | Valor máximo              |
 
 ```sql
 -- Número de empleados por departamento

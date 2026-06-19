@@ -118,15 +118,15 @@ Restricciones específicas del negocio:
 
 Los **constraints** son reglas que se aplican a las columnas para mantener la integridad de los datos.
 
-| Constraint | Qué hace | Ejemplo |
-|---|---|---|
-| `PRIMARY KEY` | Identifica cada fila de forma única | `id INT PRIMARY KEY` |
-| `FOREIGN KEY` | Relaciona dos tablas | `REFERENCES departamentos(id)` |
-| `NOT NULL` | La columna no puede estar vacía | `nombre VARCHAR(100) NOT NULL` |
-| `UNIQUE` | No permite valores repetidos | `email VARCHAR(150) UNIQUE` |
-| `DEFAULT` | Valor por defecto si no se especifica | `activo TINYINT DEFAULT 1` |
-| `CHECK` | Valida que el valor cumpla una condición | `CHECK (salario > 0)` |
-| `AUTO_INCREMENT` | Genera un número automático incremental (MySQL) | `id INT AUTO_INCREMENT` |
+| Constraint       | Qué hace                                        | Ejemplo                        |
+| ---------------- | ----------------------------------------------- | ------------------------------ |
+| `PRIMARY KEY`    | Identifica cada fila de forma única             | `id INT PRIMARY KEY`           |
+| `FOREIGN KEY`    | Relaciona dos tablas                            | `REFERENCES departamentos(id)` |
+| `NOT NULL`       | La columna no puede estar vacía                 | `nombre VARCHAR(100) NOT NULL` |
+| `UNIQUE`         | No permite valores repetidos                    | `email VARCHAR(150) UNIQUE`    |
+| `DEFAULT`        | Valor por defecto si no se especifica           | `activo TINYINT DEFAULT 1`     |
+| `CHECK`          | Valida que el valor cumpla una condición        | `CHECK (salario > 0)`          |
+| `AUTO_INCREMENT` | Genera un número automático incremental (MySQL) | `id INT AUTO_INCREMENT`        |
 
 ---
 
@@ -159,16 +159,16 @@ Un empleado tiene exactamente un expediente. Poco común — normalmente se fusi
 
 ## Resumen de conceptos
 
-| Término | Definición corta |
-|---|---|
-| SMBD | Software que gestiona la base de datos |
-| Base de datos | Colección organizada de datos |
-| BD Relacional | Datos en tablas que se pueden relacionar entre sí |
-| Tabla | Filas y columnas que guardan un tipo de dato |
-| Integridad | Reglas que garantizan datos correctos y consistentes |
-| Primary Key | Identificador único de cada fila |
-| Foreign Key | Referencia que conecta dos tablas |
-| Constraint | Restricción que define reglas sobre los datos |
+| Término       | Definición corta                                     |
+| ------------- | ---------------------------------------------------- |
+| SMBD          | Software que gestiona la base de datos               |
+| Base de datos | Colección organizada de datos                        |
+| BD Relacional | Datos en tablas que se pueden relacionar entre sí    |
+| Tabla         | Filas y columnas que guardan un tipo de dato         |
+| Integridad    | Reglas que garantizan datos correctos y consistentes |
+| Primary Key   | Identificador único de cada fila                     |
+| Foreign Key   | Referencia que conecta dos tablas                    |
+| Constraint    | Restricción que define reglas sobre los datos        |
 
 ---
 

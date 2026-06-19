@@ -15,12 +15,12 @@ estado: en-progreso
 
 Almacena los departamentos de la empresa.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id_departamento` | INT PK | Identificador único |
-| `nombre` | VARCHAR | Nombre del departamento |
-| `ubicacion` | VARCHAR | Dónde está físicamente |
-| `presupuesto` | DECIMAL | Presupuesto anual |
+| Columna           | Tipo    | Descripción             |
+| ----------------- | ------- | ----------------------- |
+| `id_departamento` | INT PK  | Identificador único     |
+| `nombre`          | VARCHAR | Nombre del departamento |
+| `ubicacion`       | VARCHAR | Dónde está físicamente  |
+| `presupuesto`     | DECIMAL | Presupuesto anual       |
 
 ---
 
@@ -28,12 +28,12 @@ Almacena los departamentos de la empresa.
 
 Catálogo de puestos disponibles con sus rangos de salario.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id_puesto` | INT PK | Identificador único |
-| `nombre_puesto` | VARCHAR | Nombre del puesto |
-| `salario_min` | DECIMAL | Salario mínimo para el puesto |
-| `salario_max` | DECIMAL | Salario máximo para el puesto |
+| Columna         | Tipo    | Descripción                   |
+| --------------- | ------- | ----------------------------- |
+| `id_puesto`     | INT PK  | Identificador único           |
+| `nombre_puesto` | VARCHAR | Nombre del puesto             |
+| `salario_min`   | DECIMAL | Salario mínimo para el puesto |
+| `salario_max`   | DECIMAL | Salario máximo para el puesto |
 
 ---
 
@@ -41,18 +41,18 @@ Catálogo de puestos disponibles con sus rangos de salario.
 
 El corazón del sistema. Cada fila es un empleado.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id_empleado` | INT PK | Identificador único |
-| `nombre` | VARCHAR | Nombre |
-| `apellido` | VARCHAR | Apellido |
-| `email` | VARCHAR UNIQUE | Correo (único) |
-| `fecha_contratacion` | DATE | Cuándo entró a la empresa |
-| `salario` | DECIMAL | Salario mensual |
-| `id_departamento` | INT FK | Qué departamento → `departamentos` |
-| `id_puesto` | INT FK | Qué puesto → `puestos` |
-| `id_jefe` | INT FK | Quién es su jefe → `empleados` (mismo tabla) |
-| `activo` | TINYINT | 1 = activo, 0 = dado de baja |
+| Columna              | Tipo           | Descripción                                  |
+| -------------------- | -------------- | -------------------------------------------- |
+| `id_empleado`        | INT PK         | Identificador único                          |
+| `nombre`             | VARCHAR        | Nombre                                       |
+| `apellido`           | VARCHAR        | Apellido                                     |
+| `email`              | VARCHAR UNIQUE | Correo (único)                               |
+| `fecha_contratacion` | DATE           | Cuándo entró a la empresa                    |
+| `salario`            | DECIMAL        | Salario mensual                              |
+| `id_departamento`    | INT FK         | Qué departamento → `departamentos`           |
+| `id_puesto`          | INT FK         | Qué puesto → `puestos`                       |
+| `id_jefe`            | INT FK         | Quién es su jefe → `empleados` (mismo tabla) |
+| `activo`             | TINYINT        | 1 = activo, 0 = dado de baja                 |
 
 ---
 
@@ -60,14 +60,14 @@ El corazón del sistema. Cada fila es un empleado.
 
 Proyectos activos o finalizados de la empresa.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id_proyecto` | INT PK | Identificador único |
-| `nombre` | VARCHAR | Nombre del proyecto |
-| `fecha_inicio` | DATE | Cuándo inició |
-| `fecha_fin` | DATE | Cuándo termina/terminó |
-| `estado` | ENUM | `activo`, `finalizado`, `cancelado` |
-| `id_departamento_lider` | INT FK | Departamento responsable |
+| Columna                 | Tipo    | Descripción                         |
+| ----------------------- | ------- | ----------------------------------- |
+| `id_proyecto`           | INT PK  | Identificador único                 |
+| `nombre`                | VARCHAR | Nombre del proyecto                 |
+| `fecha_inicio`          | DATE    | Cuándo inició                       |
+| `fecha_fin`             | DATE    | Cuándo termina/terminó              |
+| `estado`                | ENUM    | `activo`, `finalizado`, `cancelado` |
+| `id_departamento_lider` | INT FK  | Departamento responsable            |
 
 ---
 
@@ -75,12 +75,12 @@ Proyectos activos o finalizados de la empresa.
 
 Tabla de relación N:M — un empleado puede estar en varios proyectos, un proyecto puede tener varios empleados.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id_empleado` | INT PK+FK | Empleado |
-| `id_proyecto` | INT PK+FK | Proyecto |
-| `horas_asignadas` | INT | Horas dedicadas al proyecto |
-| `rol` | VARCHAR | Rol en el proyecto (Líder, Desarrollador, etc.) |
+| Columna           | Tipo      | Descripción                                     |
+| ----------------- | --------- | ----------------------------------------------- |
+| `id_empleado`     | INT PK+FK | Empleado                                        |
+| `id_proyecto`     | INT PK+FK | Proyecto                                        |
+| `horas_asignadas` | INT       | Horas dedicadas al proyecto                     |
+| `rol`             | VARCHAR   | Rol en el proyecto (Líder, Desarrollador, etc.) |
 
 ---
 
@@ -88,13 +88,13 @@ Tabla de relación N:M — un empleado puede estar en varios proyectos, un proye
 
 Se llena automáticamente con el trigger `trg_historial_salario` cuando un salario cambia.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id_historial` | INT PK | Identificador único |
-| `id_empleado` | INT FK | De quién fue el cambio |
-| `salario_anterior` | DECIMAL | Cuánto ganaba antes |
-| `salario_nuevo` | DECIMAL | Cuánto gana ahora |
-| `fecha_cambio` | DATETIME | Cuándo fue el cambio |
+| Columna            | Tipo     | Descripción            |
+| ------------------ | -------- | ---------------------- |
+| `id_historial`     | INT PK   | Identificador único    |
+| `id_empleado`      | INT FK   | De quién fue el cambio |
+| `salario_anterior` | DECIMAL  | Cuánto ganaba antes    |
+| `salario_nuevo`    | DECIMAL  | Cuánto gana ahora      |
+| `fecha_cambio`     | DATETIME | Cuándo fue el cambio   |
 
 ---
 
@@ -111,13 +111,13 @@ puestos ────────┘
 
 ## Datos de prueba incluidos
 
-| Tabla | Registros |
-|---|---|
-| `departamentos` | 5 |
-| `puestos` | 6 |
-| `empleados` | 15 |
-| `proyectos` | 5 |
-| `empleado_proyecto` | 16 |
+| Tabla                | Registros                         |
+| -------------------- | --------------------------------- |
+| `departamentos`      | 5                                 |
+| `puestos`            | 6                                 |
+| `empleados`          | 15                                |
+| `proyectos`          | 5                                 |
+| `empleado_proyecto`  | 16                                |
 | `historial_salarios` | (vacía — se llena con el trigger) |
 
 ---

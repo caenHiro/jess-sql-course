@@ -159,13 +159,13 @@ DROP TRIGGER IF EXISTS trg_historial_salario;
 
 ## Diferencias entre triggers y procedimientos
 
-| | Trigger | Procedimiento |
-|---|---|---|
-| Se llama manualmente | No — automático | Sí — con CALL |
-| Se dispara por | INSERT/UPDATE/DELETE en tabla | Llamada explícita |
-| Puede recibir parámetros | No | Sí |
-| Puede devolver resultados | No | Sí (OUT) |
-| Uso principal | Auditoría, validación automática | Lógica de negocio reutilizable |
+|                           | Trigger                          | Procedimiento                  |
+| ------------------------- | -------------------------------- | ------------------------------ |
+| Se llama manualmente      | No — automático                  | Sí — con CALL                  |
+| Se dispara por            | INSERT/UPDATE/DELETE en tabla    | Llamada explícita              |
+| Puede recibir parámetros  | No                               | Sí                             |
+| Puede devolver resultados | No                               | Sí (OUT)                       |
+| Uso principal             | Auditoría, validación automática | Lógica de negocio reutilizable |
 
 ---
 
